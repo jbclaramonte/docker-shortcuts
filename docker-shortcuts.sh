@@ -1,5 +1,5 @@
 dversion() {
-  echo 0.1.5
+  echo 0.1.6
 }
 
 dupdate() {
