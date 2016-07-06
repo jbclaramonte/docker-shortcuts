@@ -1,10 +1,11 @@
 dversion() {
-  echo 0.1.6
+  echo 0.1.7
 }
 
 dupdate() {
   rm $HOME/.docker-shortcuts/docker-shortcuts.sh
   curl -o $HOME/.docker-shortcuts/docker-shortcuts.sh -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/jbclaramonte/docker-shortcuts/master/docker-shortcuts.sh
+  source $HOME/.docker-shortcuts/docker-shortcuts.sh
 }
 
 useDockerMachineEnv() {
