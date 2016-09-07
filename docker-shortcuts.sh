@@ -87,5 +87,5 @@ alias dstop=dockerStop
 alias drestart=dockerRestart
 alias dhelp=dockerHelp
 alias dupdate=dupdate
-alias dversion=deversion
+alias dversion=dversion
 alias ddatavolume=dockerDataVolume
