@@ -1,5 +1,5 @@
 dversion() {
-  echo 0.1.7
+  echo 0.1.8
 }
 
 dupdate() {
@@ -47,10 +47,17 @@ dockerRestart() {
 	docker restart $1
 }
 
+dockerDataVolume() {
+	docker run --rm -it --volumes-from $1 ubuntu bash
+}
+
 dockerHelp() {
         echo "Raccourcis docker / docker-machine:
 
 dhelp : pour ré-afficher ces raccourcis
+
+dversion : pour afficher la version des shortcuts en cours
+dupdate : pour mettre à jour avec la dernière version des shortcuts
 
 *** docker ***
 
@@ -61,6 +68,7 @@ dstop <Container ID>             | equivalent à: docker stop <Container ID>
 drestart <Container ID>          | equivalent à: docker restart <Container ID>
 dconnect <Container ID>          | equivalent à: docker exec -it <Container ID> bash
 dps <options>                   | equivalent à: docker ps
+ddatavolume <Container ID>      | pour ouvrir une commande bash dans un docker data volume
 
 *** docker-machine ***
 Commande                        | Commentaire
@@ -78,4 +86,6 @@ alias dtail=dockerTail
 alias dstop=dockerStop
 alias drestart=dockerRestart
 alias dhelp=dockerHelp
-
+alias dupdate=dupdate
+alias dversion=deversion
+alias ddatavolume=dockerDataVolume
